@@ -1,0 +1,15 @@
+// "xyz": "live-server --host=192.168.1.9 --port=1000 && sass --watch assets/sass/style.scss:assets/css/style.css"
+
+
+
+1. run live server
+live-server --host=ipaddress --port=3000
+
+2. compile SASS
+sass --watch assets/sass/style.scss:assets/css/style.css
+
+
+or commands
+npm run xyz
+npm run sass
+
