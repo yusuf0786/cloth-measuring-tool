@@ -1,0 +1,17 @@
+.custom-container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+#shirt-form label {
+  display: block;
+  width: 100%;
+}
+
+.result-description {
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

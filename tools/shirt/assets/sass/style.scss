@@ -1,0 +1,11 @@
+@use './index' as *;
+
+#shirt-form {
+    label {
+        display: block;
+        width: 100%;
+    }
+}
+.result-description {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth Measuring Tool - Kurta</title>
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- Bootstrap JS -->
+    <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="container-fluid">
+            <div class="custom-container">
+                <h3>Kurta Measurement</h3>
+                <p>Please fill input values number as per inches and not cantemeter or other</p>
+                <form action="#" id="shirt-form" class="row" novalidate>
+                    <div class="col-lg-6">
+                        <div class="input-group align-items-center fw-bold mb-3">
+                            <label for="shirt-front-length">Length of Kurta Front</label>
+                            <input class="form-control" type="number" id="shirt-front-length" name="shirt-front-length">
+                        </div>
+                        <div class="input-group align-items-center fw-bold mb-3">
+                            <label for="shirt-back-length">Length of Kurta Back</label>
+                            <input class="form-control" type="number" id="shirt-back-length" name="shirt-back-length">
+                        </div>
+                        <div class="input-group align-items-center fw-bold mb-3">
+                            <label for="sleev-length">Sleeve length</label>
+                            <input class="form-control" type="number" id="sleev-length" name="sleev-length">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group align-items-center fw-bold mb-3">
+                            <label for="seam-allowances">Seam allowances</label>
+                            <input class="form-control" type="number" id="seam-allowances" name="seam-allowances">
+                        </div>
+                        <div class="input-group align-items-center fw-bold mb-3">
+                            <label for="fabric-width">Width of Fabric (panna)</label>
+                            <input class="form-control" type="number" id="fabric-width" name="fabric-width">
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" id="shirt-submit" class="btn btn-primary mb-3">Submit</button>
+                    </div>
+                </form>
+                <p class="result-description">Cloth Probability: <b>Width: <span class="shirt-width">xx</span> Height: <span class="shirt-height">xx</span> ( <i class="shirt-width">xx</i> X <i class="shirt-height">xx</i> )</b></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        $("#shirt-form").on('submit', function (e) {
+            e.preventDefault()
+
+            const shirtFrontLength = Number(document.getElementById("shirt-front-length").value)
+            const shirtBackLength = Number(document.getElementById("shirt-back-length").value)
+            const sleevLength = Number(document.getElementById("sleev-length").value)
+            const seamAllowances = Number(document.getElementById("seam-allowances").value)
+            const fabricWidth = Number(document.getElementById("fabric-width").value)
+
+            const shirtClothProbability = (shirtFrontLength + shirtBackLength + sleevLength + seamAllowances) / fabricWidth
+            const shirtClothProbabilityFinal = shirtClothProbability * 0.9144
+
+            shirtOutput(fabricWidth, shirtClothProbabilityFinal.toFixed(4));
+        })
+
+        function shirtOutput(width, height) {
+            $(".shirt-width").text(width)
+            $(".shirt-height").text(height)
+        }
+
+    </script>
+</body>
+</html>

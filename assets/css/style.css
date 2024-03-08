@@ -2,11 +2,25 @@
   max-width: 1200px;
   width: 95%;
   margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-#shirt-form label {
-  display: block;
-  width: 100%;
+.tools-section {
+  max-width: 900px;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  background-color: #f0f0f0;
+  padding: 2rem 1rem;
+}
+.tools-section .tools-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.tools-section .tools-container a {
+  text-align: center;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

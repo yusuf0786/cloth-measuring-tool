@@ -1,12 +1,21 @@
-.custom-container {
-    max-width: 1200px;
+@use './main';
+
+.tools-section {
+    max-width: 900px;
     width: 95%;
     margin: 0 auto;
-}
+    margin-top: 2rem;
+    background-color: #f0f0f0;
+    padding: 2rem 1rem;
 
-#shirt-form {
-    label {
-        display: block;
-        width: 100%;
+    .tools-container {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+
+        a {
+            text-align: center;
+            text-decoration: none;
+        }
     }
 }

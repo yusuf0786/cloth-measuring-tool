@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "xyz": "live-server --host=192.168.1.9 --port=1000",
-    "sass": "sass --watch assets/sass/style.scss:assets/css/style.css"
+    "xyz": "live-server --host=192.168.1.8 --port=1000",
+    "sass": "sass --watch assets/sass/style.scss:assets/css/style.css",
+    "tools-shirt-sass": "cd tools/shirt/ && sass --watch assets/sass/style.scss:assets/css/style.css"
   },
   "keywords": [],
   "author": "",
